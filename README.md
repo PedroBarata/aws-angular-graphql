@@ -1,5 +1,5 @@
 # Estudo do curso de GraphQL com AppSync, Amplify e Angular | AWS
-Link do curso: (curso)[https://www.youtube.com/watch?v=xsD0S6A5qtE&list=PLvmxnsCyoh64Pbro7LpHvsuuNMRR8c0eK]
+Link do curso: [curso](https://www.youtube.com/watch?v=xsD0S6A5qtE&list=PLvmxnsCyoh64Pbro7LpHvsuuNMRR8c0eK)
 
 ## Myapp
 
