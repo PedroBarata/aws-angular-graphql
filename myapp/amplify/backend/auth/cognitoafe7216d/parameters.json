@@ -1,0 +1,73 @@
+{
+    "identityPoolName": "cognitoafe7216d_identitypool_afe7216d",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "cognitoafe7216d_lambda_log_policy",
+    "openIdLambdaRoleName": "cognitoafe7216d_openid_lambda_role",
+    "openIdRolePolicy": "cognitoafe7216d_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "cognitoafe7216d_openid_lambda_iam_policy",
+    "openIdLogPolicy": "cognitoafe7216d_openid_lambda_log_policy",
+    "userPoolName": "cognitoafe7216d_userpool_afe7216d",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "cognitoafe7216d_sns-role",
+    "roleExternalId": "cognitoafe7216d_role_external_id",
+    "policyName": "cognitoafe7216d-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "cognitoafe7216d_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "cognitoafe7216d_totp_lambda_role",
+    "mfaLambdaLogPolicy": "cognitoafe7216d_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "cognitoafe7216d_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "cognitoafe7216d_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "cognitoafe7216d_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "cognitoafe7216d_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "cognitoafe7216d_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "cognitoafe7216d",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
