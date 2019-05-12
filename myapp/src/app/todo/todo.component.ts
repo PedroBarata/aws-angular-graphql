@@ -11,5 +11,18 @@ export class TodoComponent implements OnInit {
 
   ngOnInit() {
   }
+ 
+  createTodo = () => {
+    const newTodo = {
+      name: 'Todo' + Math.floor(Math.random() * 100),
+      body: 'sample description',
+      completed: false
+    }
 
+    
+  }
+
+  listTodos = () => {
+
+  }
 }
