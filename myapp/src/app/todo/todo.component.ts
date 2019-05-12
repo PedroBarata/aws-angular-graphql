@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { APIService } from '../API.service';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
@@ -7,22 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  allTodos: any = [];
+  constructor(private api: APIService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    let result = await this.api.ListTodos();
+    this.allTodos = result.items;
   }
- 
-  createTodo = () => {
+
+  async createTodo() {
     const newTodo = {
       name: 'Todo' + Math.floor(Math.random() * 100),
       body: 'sample description',
       completed: false
     }
 
-    
+    let result = await this.api.CreateTodo(newTodo);
+
+    this.allTodos.push(result);
+    debugger;
+
+
   }
 
-  listTodos = () => {
-
+  async listTodos() {
+    let result = await this.api.ListTodos();
+    this.allTodos = result.items;
   }
 }
