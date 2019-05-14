@@ -2,14 +2,12 @@
   <!-- <p>{{timer < 10? '00:0'+timer : '00:'+timer}}</p>
   <button *ngIf="!isStarted" (click)="setTimer()">Start Timer</button>
   <button *ngIf="isStarted" (click)="pauseTimer()">Pause Timer</button> -->
-  <button (click)="createTodo()">Create Todo</button>
-  <button (click)="listTodos()">Get Todos</button>
+  <input type="text" #todoName>
+  <button (click)="createTodo(todoName)">Create Todo</button>
 
   <div *ngFor="let todo of allTodos">
     <hr>
-    <p>Title: {{todo.name}}</p>
-    <p>Body: {{todo.body}}</p>
-    <p>{{todo.completed? "Completed" : "Pending"}}</p>
+    <p>{{todo.name}}</p>
   </div>
 
 </div>
